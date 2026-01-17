@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gayan Accounting | A/L Accounting</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- HERO SECTION -->
+  <div class="hero-container">
+
+    <!-- LEFT AREA (TEXT + BUTTONS SIDE BY SIDE) -->
+    <div class="hero-left">
+
+      <!-- TEXT -->
+      <div class="hero-text">
+        <h1 class="expert-title">ACCOUNTING EXPERT</h1>
+        <hr class="hero-line">
+        <h2 class="tutor-name">Gayan S. Jayasuriya</h2>
+
+        <p class="class-types">
+          Theory • Revision • Paper Classes
+        </p>
+      </div>
+
+      <!-- BUTTONS (NEXT TO TEXT) -->
+      <div class="hero-buttons">
+        <button class="stat-btn"
+          onclick="window.location.href='https://forms.gle/YOUR_GOOGLE_FORM_LINK'">
+          REGISTER NOW
+        </button>
+
+        <button class="stat-btn"
+          onclick="window.location.href='dashboard.html'">
+          VIEW CLASSES
+        </button>
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image">
+      <img src="./images/tutor.png" alt="Tutor Image">
+    </div>
+
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-container">
+
+    <div class="stat-box">
+      <h3>300+</h3>
+      <p>Students Enrolled</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>92%</h3>
+      <p>A/L Pass Rate</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>60%</h3>
+      <p>A Grades</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>100%</h3>
+      <p>Syllabus Coverage</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>8+</h3>
+      <p>Years Experience</p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- CHATBOT -->
+<div class="chatbot" id="chatbot">
+  <h4>Ask About Classes</h4>
+  <div id="chatbox">
+    <p><strong>Bot:</strong> Hi! Ask me about classes or registration.</p>
+  </div>
+  <input type="text" id="userInput" placeholder="Type your question...">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+<script src="./js/chatbot.js"></script>
+
+</body>
+</html>

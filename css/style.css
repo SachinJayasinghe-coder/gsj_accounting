@@ -1,0 +1,181 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NO SCROLL */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* APP */
+.app-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #0b3c5d, #1e6091);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 60px;
+}
+
+/* HERO */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT AREA */
+.hero-left {
+  display: flex;
+  align-items: center;   /* 👈 vertical alignment */
+  gap: 50px;             /* space between text & buttons */
+}
+
+/* TEXT */
+.hero-text {
+  max-width: 520px;
+}
+
+.expert-title {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.hero-line {
+  width: 120px;
+  border: 4px solid #fca311;
+  margin: 24px 0;
+}
+
+.tutor-name {
+  font-size: 3.5rem;
+}
+
+.class-types {
+  margin-top: 14px;
+  font-size: 1.3rem;
+}
+
+/* BUTTONS (NEXT TO TEXT, VERTICAL) */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 400px;
+}
+
+/* BUTTON STYLE (STAT LOOK) */
+.stat-btn {
+  background: rgba(255,255,255,0.14);
+  color: #fca311;
+  border: none;
+  border-radius: 20px;
+  padding: 46px 46px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stat-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.22);
+}
+
+/* RIGHT IMAGE */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+}
+
+/* STATS */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 26px;
+}
+
+.stat-box {
+  background: rgba(255,255,255,0.14);
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.22);
+}
+
+.stat-box h3 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #fca311;
+}
+
+/* CHATBOT */
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fca311;
+  color: #000;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.chatbot {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  color: #000;
+  padding: 12px;
+  border-radius: 14px;
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  html, body {
+    overflow: auto;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    flex-direction: column;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
