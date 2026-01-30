@@ -1,22 +1,22 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* NO SCROLL */
+/* ================= BASE ================= */
 html, body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   font-family: "Segoe UI", Arial, sans-serif;
+  overflow: hidden;
 }
 
-/* APP */
+/* ================= APP ================= */
 .app-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, #0b3c5d, #1e6091);
   color: white;
   display: flex;
@@ -25,19 +25,22 @@ html, body {
   padding: 50px 60px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
+  width: 100%;
 }
 
 /* LEFT AREA */
 .hero-left {
   display: flex;
-  align-items: center;   /* 👈 vertical alignment */
-  gap: 50px;             /* space between text & buttons */
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
 }
 
 /* TEXT */
@@ -66,17 +69,16 @@ html, body {
   font-size: 1.3rem;
 }
 
-/* BUTTONS (NEXT TO TEXT, VERTICAL) */
+/* ================= BUTTONS ================= */
 .hero-buttons {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left: 400px;
 }
 
-/* BUTTON STYLE (STAT LOOK) */
+/* BUTTON STYLE */
 .stat-btn {
-  background: rgba(255,255,255,0.14);
+  background: rgba(255, 255, 255, 0.14);
   color: #fca311;
   border: none;
   border-radius: 20px;
@@ -88,11 +90,11 @@ html, body {
 }
 
 .stat-btn:hover {
-  transform: scale(1.1);
-  background: rgba(255,255,255,0.22);
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.22);
 }
 
-/* RIGHT IMAGE */
+/* ================= IMAGE ================= */
 .hero-image {
   flex: 1;
   display: flex;
@@ -105,7 +107,7 @@ html, body {
   height: auto;
 }
 
-/* STATS */
+/* ================= STATS ================= */
 .stats-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -113,7 +115,7 @@ html, body {
 }
 
 .stat-box {
-  background: rgba(255,255,255,0.14);
+  background: rgba(255, 255, 255, 0.14);
   padding: 30px 20px;
   border-radius: 20px;
   text-align: center;
@@ -121,8 +123,8 @@ html, body {
 }
 
 .stat-box:hover {
-  transform: scale(1.1);
-  background: rgba(255,255,255,0.22);
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .stat-box h3 {
@@ -131,7 +133,7 @@ html, body {
   color: #fca311;
 }
 
-/* CHATBOT */
+/* ================= CHATBOT ================= */
 .chatbot-icon {
   position: fixed;
   bottom: 20px;
@@ -160,10 +162,15 @@ html, body {
   display: none;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
   html, body {
     overflow: auto;
+  }
+
+  .app-container {
+    padding: 30px 20px;
   }
 
   .hero-container {
@@ -173,9 +180,26 @@ html, body {
 
   .hero-left {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-buttons .stat-btn {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-top: 30px;
   }
 
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
