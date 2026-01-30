@@ -10,7 +10,7 @@ html, body {
   width: 100%;
   min-height: 100%;
   font-family: "Segoe UI", Arial, sans-serif;
-  overflow-x: hidden;   /* allow vertical scroll */
+  overflow-x: hidden;
 }
 
 /* ================= APP ================= */
@@ -22,7 +22,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 60px;
+  padding: 40px 50px;   /* ⬅ reduced */
 }
 
 /* ================= HERO ================= */
@@ -30,47 +30,47 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 50px;
 }
 
 /* LEFT AREA */
 .hero-left {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
 }
 
 /* TEXT */
 .hero-text {
-  max-width: 520px;
+  max-width: 500px;
 }
 
 .expert-title {
-  font-size: 5.5rem; /* safer than 6rem */
+  font-size: 4.8rem;   /* ⬅ reduced for 100% zoom */
   font-weight: 900;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 .hero-line {
-  width: 120px;
+  width: 110px;
   border: 4px solid #fca311;
-  margin: 24px 0;
+  margin: 20px 0;
 }
 
 .tutor-name {
-  font-size: 3.2rem;
+  font-size: 2.8rem;   /* ⬅ reduced */
 }
 
 .class-types {
-  margin-top: 14px;
-  font-size: 1.25rem;
+  margin-top: 12px;
+  font-size: 1.15rem;
 }
 
 /* ================= BUTTONS ================= */
 .hero-buttons {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 22px;
 }
 
 /* BUTTON STYLE */
@@ -78,16 +78,16 @@ html, body {
   background: rgba(255,255,255,0.14);
   color: #fca311;
   border: none;
-  border-radius: 20px;
-  padding: 40px 42px;
-  font-size: 1.15rem;
+  border-radius: 18px;
+  padding: 30px 34px;   /* ⬅ BIG FIX */
+  font-size: 1.05rem;
   font-weight: 800;
   cursor: pointer;
   transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .stat-btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   background: rgba(255,255,255,0.22);
 }
 
@@ -99,7 +99,7 @@ html, body {
 }
 
 .hero-image img {
-  max-width: 420px;
+  max-width: 380px;   /* ⬅ reduced */
   width: 100%;
   height: auto;
 }
@@ -108,25 +108,25 @@ html, body {
 .stats-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 26px;
-  margin-top: 40px;
+  gap: 22px;
+  margin-top: 28px;   /* ⬅ reduced */
 }
 
 .stat-box {
   background: rgba(255,255,255,0.14);
-  padding: 30px 20px;
-  border-radius: 20px;
+  padding: 22px 16px;  /* ⬅ reduced */
+  border-radius: 18px;
   text-align: center;
   transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .stat-box:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   background: rgba(255,255,255,0.22);
 }
 
 .stat-box h3 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: #fca311;
 }
@@ -164,7 +164,7 @@ html, body {
 @media (max-width: 768px) {
 
   .app-container {
-    padding: 30px 20px;
+    padding: 26px 18px;
   }
 
   .hero-container {
@@ -175,15 +175,15 @@ html, body {
   .hero-left {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 26px;
   }
 
   .expert-title {
-    font-size: 3.2rem;
+    font-size: 3.1rem;
   }
 
   .tutor-name {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   .hero-buttons {
@@ -193,8 +193,8 @@ html, body {
 
   .stat-btn {
     width: 100%;
-    padding: 26px;
-    font-size: 1rem;
+    padding: 22px;      /* ⬅ mobile tighter */
+    font-size: 0.95rem;
   }
 
   .hero-image {
@@ -204,5 +204,11 @@ html, body {
 
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;          /* ⬅ BIG FIX for dashboard gap */
+    margin-top: 16px;
+  }
+
+  .stat-box {
+    padding: 16px 12px; /* ⬅ BIG FIX */
   }
 }
